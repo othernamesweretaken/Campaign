@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Table } from 'semantic-ui-react';
 import { Link } from '../../../routes';
-import Layout from '../../../components/Layout';
+import Layout from '../../../components/layout';
 import Campaign from '../../../contract/campaign';
 import RequestRow from '../../../components/RequestRow';
 
