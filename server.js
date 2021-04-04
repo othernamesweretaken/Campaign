@@ -7,7 +7,7 @@ const handler = routes.getRequestHandler(app)
 // Without express
 const {createServer} = require('https')
 app.prepare().then(() => {
-  createServer(handler)..listen(process.env.PORT || 3000,(err)=>{
+  createServer(handler).listen(process.env.PORT || 3000,(err)=>{
     if(err) throw err;
     console.log('Ready on localhost:3000');
   });
