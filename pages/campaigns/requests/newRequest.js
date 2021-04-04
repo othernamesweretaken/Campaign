@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Form, Button, Message, Input } from 'semantic-ui-react';
 import Campaign from '../../../contract/campaign';
 import { Link, Router } from '../../../routes';
-import Layout from '../../../components/Layout';
+import Layout from '../../../components/layout';
 import web3 from '../../../contract/web3';
 
 
