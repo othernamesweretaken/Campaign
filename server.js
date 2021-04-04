@@ -5,7 +5,7 @@ const handler = routes.getRequestHandler(app)
  
  
 // Without express
-const {createServer} = require('https')
+const {createServer} = require('http')
 app.prepare().then(() => {
   createServer(handler).listen(process.env.PORT || 3000,(err)=>{
     if(err) throw err;
