@@ -1,0 +1,1 @@
+{"ast":null,"code":"import web3 from './web3';\nimport Campaign from './build/Campaign.json';\n\nconst currentCampaign = address => {\n  const c = new web3.eth.Contract(JSON.parse(Campaign.interface), address);\n  c.setProvider(web3.currentProvider);\n  return c;\n};\n\nexport default currentCampaign;","map":null,"metadata":{},"sourceType":"module"}
