@@ -13,4 +13,3 @@ app.prepare().then(() => {
   });
 })
 
-

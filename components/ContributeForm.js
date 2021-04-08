@@ -16,6 +16,7 @@ class ContributeForm1 extends Component {
         event.preventDefault();
         try{
             this.setState({loading:true, errorMessage:''});
+            if(typeof window !=='undefined'){
             await window.ethereum.enable();
 
             //getAccounts is deprecated.
@@ -26,6 +27,7 @@ class ContributeForm1 extends Component {
                 from: accounts[0],
                 value: web3.utils.toWei(this.state.contributeAmount)
             });
+        }
             Router.replaceRoute(`/campaigns/${this.props.address}`);
             
         }

@@ -101,45 +101,6 @@ module.exports = __webpack_require__("Mybo");
 
 /***/ }),
 
-/***/ "5Yp1":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("ZHh6");
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("aIN1");
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("FfxO");
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(semantic_ui_react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("xnum");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
-
-
-
-
-
-const layout = props => {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_4__["Container"], {
-    style: {},
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css"
-      })
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_header__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {}), props.children, /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_footer__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {})]
-  });
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (layout);
-
-/***/ }),
-
 /***/ "8cHP":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -154,6 +115,124 @@ module.exports = routes;
 /***/ (function(module, exports) {
 
 module.exports = require("next-routes");
+
+/***/ }),
+
+/***/ "CafY":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__("F5FC");
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+
+// EXTERNAL MODULE: external "semantic-ui-react"
+var external_semantic_ui_react_ = __webpack_require__("FfxO");
+
+// EXTERNAL MODULE: ./routes.js
+var routes = __webpack_require__("8cHP");
+
+// CONCATENATED MODULE: ./components/header.js
+
+
+// import React from 'react';
+
+
+/* harmony default export */ var header = (() => {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_semantic_ui_react_["Menu"], {
+    style: {
+      marginTop: '10px'
+    },
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(routes["Link"], {
+      route: "/",
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+        className: "item",
+        children: "KickStarter"
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_semantic_ui_react_["Menu"].Menu, {
+      position: "right",
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(routes["Link"], {
+        route: "/",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+          className: "item",
+          children: "Campaigns"
+        })
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(routes["Link"], {
+        route: "/campaigns/new",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+          className: "item",
+          children: "+"
+        })
+      })]
+    })]
+  });
+});
+// CONCATENATED MODULE: ./components/footer.js
+
+
+
+
+/* harmony default export */ var footer = (() => {
+  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+    style: {
+      bottom: "0",
+      left: "10"
+    },
+    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+      style: {
+        position: "fixed",
+        bottom: "0",
+        paddingBottom: "20px"
+      },
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("hr", {}), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_semantic_ui_react_["Menu"], {
+        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+          className: "item",
+          children: " \xA9 Created by - Jainil Vora "
+        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_semantic_ui_react_["Menu"].Menu, {
+          position: "right",
+          style: {
+            whiteSpace: 'pre-wrap',
+            overflow: 'auto'
+          },
+          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+            className: "item",
+            children: " Ethereum & Solidity - A Complete Developer's Guide"
+          })
+        })]
+      })]
+    })
+  });
+});
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// CONCATENATED MODULE: ./components/layout.js
+
+
+
+
+
+
+
+
+const layout = props => {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(external_semantic_ui_react_["Container"], {
+    style: {},
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(head_default.a, {
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("link", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css"
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(header, {}), props.children, /*#__PURE__*/Object(jsx_runtime_["jsx"])(footer, {})]
+  });
+};
+
+/* harmony default export */ var components_layout = __webpack_exports__["a"] = (layout);
 
 /***/ }),
 
@@ -197,8 +276,8 @@ var external_semantic_ui_react_ = __webpack_require__("FfxO");
 // EXTERNAL MODULE: ./routes.js
 var routes = __webpack_require__("8cHP");
 
-// EXTERNAL MODULE: ./components/Layout.js
-var Layout = __webpack_require__("5Yp1");
+// EXTERNAL MODULE: ./components/layout.js + 2 modules
+var layout = __webpack_require__("CafY");
 
 // EXTERNAL MODULE: ./contract/campaign.js
 var contract_campaign = __webpack_require__("yktz");
@@ -382,7 +461,7 @@ class requests_RequestIndex extends external_react_["Component"] {
       HeaderCell,
       Body
     } = external_semantic_ui_react_["Table"];
-    return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Layout["a" /* default */], {
+    return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(layout["a" /* default */], {
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("h3", {
         children: "Requests"
       }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(routes["Link"], {
@@ -430,101 +509,6 @@ class requests_RequestIndex extends external_react_["Component"] {
 }
 
 /* harmony default export */ var campaigns_requests = __webpack_exports__["default"] = (requests_RequestIndex);
-
-/***/ }),
-
-/***/ "ZHh6":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("FfxO");
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("8cHP");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_2__);
-
-
-// import React from 'react';
-
-
-/* harmony default export */ __webpack_exports__["a"] = (() => {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"], {
-    style: {
-      marginTop: '10px'
-    },
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_routes__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      route: "/",
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-        className: "item",
-        children: "KickStarter"
-      })
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Menu, {
-      position: "right",
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_routes__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        route: "/",
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-          className: "item",
-          children: "Campaigns"
-        })
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_routes__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        route: "/campaigns/new",
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-          className: "item",
-          children: "+"
-        })
-      })]
-    })]
-  });
-});
-
-/***/ }),
-
-/***/ "aIN1":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("FfxO");
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-/* harmony default export */ __webpack_exports__["a"] = (() => {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-    style: {
-      bottom: "0",
-      left: "10"
-    },
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-      style: {
-        position: "fixed",
-        bottom: "0",
-        paddingBottom: "20px"
-      },
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("hr", {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-          className: "item",
-          children: " \xA9 Created by - Jainil Vora "
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"].Menu, {
-          position: "right",
-          style: {
-            whiteSpace: 'pre-wrap',
-            overflow: 'auto'
-          },
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-            className: "item",
-            children: " Ethereum & Solidity - A Complete Developer's Guide"
-          })
-        })]
-      })]
-    })
-  });
-});
 
 /***/ }),
 

@@ -6,7 +6,7 @@ import { Link, Router } from '../../../routes';
 import Layout from '../../../components/layout';
 import web3 from '../../../contract/web3';
 
-
+let accounts;
 class RequestNew extends Component {
   state = {
     value: '',
@@ -37,13 +37,15 @@ class RequestNew extends Component {
       //  console.log("hi");
         const campaignInstance = await Campaign(this.props.address);
         //console.log(campaignInstance);
-        await window.ethereum.enable();
+        if(typeof window !=='undefined'){
+          await window.ethereum.enable();
         //console.log("2");
         const accounts = await window.web3.eth.accounts;
         console.log(accounts);
-
         await campaignInstance.methods.createRequest(description, web3.utils.toWei(value, 'ether'), recipient)
         .send({from: accounts[0]});
+        }
+
 
         Router.pushRoute(`/campaigns/${this.props.address}/requests`);
         } catch (err) {

@@ -13,10 +13,12 @@ class RequestRow extends Component {
 
     this.setState({loading: true, errorMessage:'In progress'});
     try{
+      if(typeof window !=='undefined'){
     const campaign = Campaign(this.props.address);
     await window.ethereum.enable();
     const accounts = await window.web3.eth.accounts;
     await campaign.methods.approveRequest(this.props.id).send({from: accounts[0]});
+      }
     Router.replaceRoute(`/campaigns/${this.props.address}/requests`);
     }
     catch(err){

@@ -30,7 +30,9 @@ class CampaignNew extends Component{
         event.preventDefault();
         try{
         this.setState({loading:true, errorMessage:''});
-        await window.ethereum.enable();
+        if(typeof window !=='undefined'){
+            await window.ethereum.enable();
+    }
 //Get Accounts doesnot work any more. Much time wasted here.
         accounts = await web3.eth.accounts;
         console.log(accounts);
