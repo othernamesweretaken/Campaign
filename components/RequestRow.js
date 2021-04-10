@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Table, Button, Message } from 'semantic-ui-react';
 import web3 from '../contract/web3';
 import Campaign from '../contract/campaign';
+import { Router } from '../routes';
 
 class RequestRow extends Component {
     state={
