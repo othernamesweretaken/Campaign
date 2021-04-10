@@ -27,7 +27,8 @@ static async getInitialProps(){
     //     const accounts = await web3.eth.accounts;
     // }
 renderCampaigns(){
-    const items = this.props.campaigns.map(address => {
+    const campaigns = await factory.methods.getDeployedContract().call();
+    const items = campaigns.map(address => {
         return {
             header: address,
             description: <Link route={`/campaigns/${address}`}><a>View Campaign</a></Link>,

@@ -296,6 +296,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 class RequestRow_RequestRow extends external_react_["Component"] {
   constructor(...args) {
     super(...args);
@@ -312,13 +313,9 @@ class RequestRow_RequestRow extends external_react_["Component"] {
       });
 
       try {
-        const campaign = Object(contract_campaign["a" /* default */])(this.props.address);
-        await window.ethereum.enable();
-        const accounts = await window.web3.eth.accounts;
-        await campaign.methods.approveRequest(this.props.id).send({
-          from: accounts[0]
-        });
-        Router.replaceRoute(`/campaigns/${this.props.address}/requests`);
+        if (false) {}
+
+        routes["Router"].replaceRoute(`/campaigns/${this.props.address}/requests`);
       } catch (err) {
         this.setState({
           errorMessage: err.message
@@ -343,7 +340,7 @@ class RequestRow_RequestRow extends external_react_["Component"] {
         await campaign.methods.finalizeRequest(this.props.id).send({
           from: accounts[0]
         });
-        Router.replaceRoute(`/campaigns/${this.props.address}/requests`);
+        routes["Router"].replaceRoute(`/campaigns/${this.props.address}/requests`);
       } catch (err) {
         this.setState({
           errorMessage: err.message

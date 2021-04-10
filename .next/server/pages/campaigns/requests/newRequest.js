@@ -270,6 +270,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+let accounts;
 
 class RequestNew extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(...args) {
@@ -299,13 +300,8 @@ class RequestNew extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
         const campaignInstance = await Object(_contract_campaign__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(this.props.address); //console.log(campaignInstance);
 
-        await window.ethereum.enable(); //console.log("2");
+        if (false) {}
 
-        const accounts = await window.web3.eth.accounts;
-        console.log(accounts);
-        await campaignInstance.methods.createRequest(description, _contract_web3__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"].utils.toWei(value, 'ether'), recipient).send({
-          from: accounts[0]
-        });
         _routes__WEBPACK_IMPORTED_MODULE_4__["Router"].pushRoute(`/campaigns/${this.props.address}/requests`);
       } catch (err) {
         this.setState({

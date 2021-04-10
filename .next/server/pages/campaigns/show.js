@@ -315,15 +315,9 @@ class ContributeForm_ContributeForm1 extends external_react_["Component"] {
           loading: true,
           errorMessage: ''
         });
-        await window.ethereum.enable(); //getAccounts is deprecated.
 
-        const accounts = await window.web3.eth.accounts;
-        console.log(accounts);
-        const CampaignInstance = Object(campaign["a" /* default */])(this.props.address);
-        await CampaignInstance.methods.contribute().send({
-          from: accounts[0],
-          value: web3["a" /* default */].utils.toWei(this.state.contributeAmount)
-        });
+        if (false) {}
+
         routes["Router"].replaceRoute(`/campaigns/${this.props.address}`);
       } catch (err) {
         this.setState({
